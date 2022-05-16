@@ -28,6 +28,8 @@ builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 //repository & service
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 // auto mapper
 builder.Services.AddAutoMapper(typeof(MapProfile));
