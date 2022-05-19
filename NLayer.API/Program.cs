@@ -29,6 +29,8 @@ builder.Services.Configure<ApiBehaviorOptions>(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped(typeof(NotFoundFilter<>));
+
 //unit of work service
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
